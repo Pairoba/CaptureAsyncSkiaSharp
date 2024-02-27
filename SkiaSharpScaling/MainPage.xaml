@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SkiaSharpScaling"
+             x:Class="SkiaSharpScaling.MainPage">
+    <VerticalStackLayout>
+        <Border x:Name="CaptureTarget"
+                HeightRequest="250"
+                WidthRequest="250"
+                StrokeThickness="10"
+                Stroke="Blue">
+            <AbsoluteLayout BackgroundColor="Green">
+                <local:CustomView AbsoluteLayout.LayoutBounds="40, 40, 100, 100"
+                                  AbsoluteLayout.LayoutFlags="None" />
+            </AbsoluteLayout>
+        </Border>
+        <Button Text="Capture Async"
+                Clicked="CaptureAsync"/>
+        <Image x:Name="CaptureImageView"
+               HeightRequest="250"
+               WidthRequest="250"/>
+    </VerticalStackLayout>
+</ContentPage>
